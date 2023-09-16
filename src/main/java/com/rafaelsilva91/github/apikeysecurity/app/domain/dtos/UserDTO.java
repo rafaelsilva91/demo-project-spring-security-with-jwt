@@ -1,6 +1,6 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.dtos;
+package com.rafaelsilva91.github.apikeysecurity.app.domain.dtos;
 
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.entities.User;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.entities.User;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;

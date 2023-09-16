@@ -1,10 +1,10 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.services;
+package com.rafaelsilva91.github.apikeysecurity.app.domain.services;
 
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.dtos.UserDTO;
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.entities.User;
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.repositories.IUserRepository;
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.services.exceptions.DataIntegrityViolationException;
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.services.exceptions.ObjectNotFoundExceptions;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.dtos.UserDTO;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.entities.User;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.repositories.IUserRepository;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.services.exceptions.DataIntegrityViolationException;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.services.exceptions.ObjectNotFoundExceptions;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

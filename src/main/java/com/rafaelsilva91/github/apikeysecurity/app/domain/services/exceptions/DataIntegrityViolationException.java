@@ -1,4 +1,4 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.services.exceptions;
+package com.rafaelsilva91.github.apikeysecurity.app.domain.services.exceptions;
 
 public class DataIntegrityViolationException extends RuntimeException {
 

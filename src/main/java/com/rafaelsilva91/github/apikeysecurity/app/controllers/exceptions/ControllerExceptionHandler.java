@@ -1,7 +1,7 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity.controllers.exceptions;
+package com.rafaelsilva91.github.apikeysecurity.app.controllers.exceptions;
 
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.services.exceptions.DataIntegrityViolationException;
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.services.exceptions.ObjectNotFoundExceptions;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.services.exceptions.DataIntegrityViolationException;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.services.exceptions.ObjectNotFoundExceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

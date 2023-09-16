@@ -1,8 +1,8 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity.controllers;
+package com.rafaelsilva91.github.apikeysecurity.app.controllers;
 
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.dtos.UserDTO;
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.entities.User;
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.services.UserService;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.dtos.UserDTO;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.entities.User;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;

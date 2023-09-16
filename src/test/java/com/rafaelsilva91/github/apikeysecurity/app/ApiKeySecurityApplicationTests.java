@@ -1,4 +1,4 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity;
+package com.rafaelsilva91.github.apikeysecurity.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.entities;
+package com.rafaelsilva91.github.apikeysecurity.app.domain.entities;
 
-import com.rafaelsilva91.github.apikeysecurity.apikeysecurity.domain.dtos.UserDTO;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.dtos.UserDTO;
 
 import javax.persistence.*;
 import java.io.Serializable;

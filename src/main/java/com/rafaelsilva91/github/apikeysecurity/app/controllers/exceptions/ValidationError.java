@@ -1,4 +1,4 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity.controllers.exceptions;
+package com.rafaelsilva91.github.apikeysecurity.app.controllers.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

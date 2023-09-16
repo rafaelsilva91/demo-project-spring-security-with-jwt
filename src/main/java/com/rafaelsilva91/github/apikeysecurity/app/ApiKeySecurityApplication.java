@@ -1,4 +1,4 @@
-package com.rafaelsilva91.github.apikeysecurity.apikeysecurity;
+package com.rafaelsilva91.github.apikeysecurity.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
