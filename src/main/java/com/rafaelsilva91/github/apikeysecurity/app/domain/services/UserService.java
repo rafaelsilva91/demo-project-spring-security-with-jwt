@@ -1,7 +1,7 @@
 package com.rafaelsilva91.github.apikeysecurity.app.domain.services;
 
 import com.rafaelsilva91.github.apikeysecurity.app.domain.dtos.UserDTO;
-import com.rafaelsilva91.github.apikeysecurity.app.domain.entities.User;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.entities.Users;
 import com.rafaelsilva91.github.apikeysecurity.app.domain.repositories.IUserRepository;
 import com.rafaelsilva91.github.apikeysecurity.app.domain.services.exceptions.DataIntegrityViolationException;
 import com.rafaelsilva91.github.apikeysecurity.app.domain.services.exceptions.ObjectNotFoundExceptions;
@@ -19,19 +19,19 @@ public class UserService {
         this.repository = repository;
     }
 
-    public List<User> findAll(){
-        List<User> list = repository.findAll();
+    public List<Users> findAll(){
+        List<Users> list = repository.findAll();
         return list;
     }
 
-    public User create(UserDTO objDto) {
+    public Users create(UserDTO objDto) {
         validacaoUsuario(objDto);
-        User usuario = new User(objDto);
+        Users usuario = new Users(objDto);
         return repository.save(usuario);
     }
 
     private void validacaoUsuario(UserDTO objDTO) {
-        Optional<User> obj =  repository.findByLogin(objDTO.getLogin());
+        Optional<Users> obj =  repository.findByLogin(objDTO.getLogin());
         if(obj.isPresent() && obj.get().getId() != objDTO.getId()){
             throw new DataIntegrityViolationException("Login já cadastrado no sistema!");
         }
@@ -42,14 +42,14 @@ public class UserService {
         }
     }
 
-    public User findById(Integer id) {
-        Optional<User> usuario = repository.findById(id);
+    public Users findById(Integer id) {
+        Optional<Users> usuario = repository.findById(id);
         return usuario.orElseThrow(()->new ObjectNotFoundExceptions("Usuario não encontrado!"));
 
     }
 
-    public User findByLogin(String login){
-        Optional<User> usuario = repository.findByLogin(login);
+    public Users findByLogin(String login){
+        Optional<Users> usuario = repository.findByLogin(login);
         return usuario.orElseThrow(()->new ObjectNotFoundExceptions("Usuario não encontrado!"));
     }
 

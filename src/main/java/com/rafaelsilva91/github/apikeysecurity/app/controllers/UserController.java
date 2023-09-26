@@ -1,7 +1,7 @@
 package com.rafaelsilva91.github.apikeysecurity.app.controllers;
 
 import com.rafaelsilva91.github.apikeysecurity.app.domain.dtos.UserDTO;
-import com.rafaelsilva91.github.apikeysecurity.app.domain.entities.User;
+import com.rafaelsilva91.github.apikeysecurity.app.domain.entities.Users;
 import com.rafaelsilva91.github.apikeysecurity.app.domain.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ public class UserController {
 
     @GetMapping("/list")
     public ResponseEntity<List<UserDTO>> findAll() {
-        List<User> list = service.findAll();
+        List<Users> list = service.findAll();
         List<UserDTO> listDTO = list.stream().map(obj -> new UserDTO(obj)).collect(Collectors.toList());
 
         return ResponseEntity.ok().body(listDTO);
@@ -37,7 +37,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseEntity<UserDTO> findById(@PathVariable Integer id) {
-        User obj = service.findById(id);
+        Users obj = service.findById(id);
         UserDTO objDTO = new UserDTO(obj);
         return ResponseEntity.ok().body(objDTO);
     }
@@ -47,7 +47,7 @@ public class UserController {
         //System.out.println("senha: "+objDto.getPassword());
         objDto.setPassword(encoder.encode(objDto.getPassword()));
         //System.out.println("senha encriptada: "+objDto.getPassword());
-        User usuario = service.create(objDto);
+        Users usuario = service.create(objDto);
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
@@ -60,7 +60,7 @@ public class UserController {
     public ResponseEntity<Boolean> validPassword(@RequestParam String login,
                                                  @RequestParam String password) {
 
-        User usuario = service.findByLogin(login);
+        Users usuario = service.findByLogin(login);
 
         if (usuario == null) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);

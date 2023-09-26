@@ -6,13 +6,13 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class User implements Serializable {
+public class Users implements Serializable {
 
     private static final long serialversionUID = 1L;
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     @Column(unique = true)
@@ -20,20 +20,19 @@ public class User implements Serializable {
 
     @Column(unique = true)
     private String email;
-
     private String password;
 
-    public User() {
+    public Users() {
     }
 
-    public User(Integer id, String login, String email, String password) {
+    public Users(Integer id, String login, String email, String password) {
         this.id = id;
         this.login = login;
         this.email = email;
         this.password = password;
     }
 
-    public User(UserDTO objDto) {
+    public Users(UserDTO objDto) {
         this.id = objDto.getId();
         this.login = objDto.getLogin();
         this.email = objDto.getEmail();
@@ -77,12 +76,12 @@ public class User implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
+        if (!(o instanceof Users)) return false;
 
-        User user = (User) o;
+        Users users = (Users) o;
 
-        if (getId() != null ? !getId().equals(user.getId()) : user.getId() != null) return false;
-        return getLogin() != null ? getLogin().equals(user.getLogin()) : user.getLogin() == null;
+        if (getId() != null ? !getId().equals(users.getId()) : users.getId() != null) return false;
+        return getLogin() != null ? getLogin().equals(users.getLogin()) : users.getLogin() == null;
     }
 
     @Override
